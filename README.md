@@ -17,7 +17,6 @@
 
 ### Notes
 - Load artifacts with `joblib.load()` 
-- 25,065 rows dropped — countries absent from index
+- 25,065 rows dropped 
 - Train/Val/Test split: 70/15/15
 - Country column remains as full name (e.g. "Australia") 
-- CoL index columns are highly col linear — noted in correlation heatmap
