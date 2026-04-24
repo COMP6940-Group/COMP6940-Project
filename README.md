@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./artifacts/logo.png" alt="The Apex Predictors logo" width="240" />
+<img src="./artifacts/logo.png" alt="The Apex Predictors logo" width="180" />
 
 # THE APEX PREDICTORS
 
@@ -8,7 +8,7 @@
 
 An anomaly detection and fair-market wage framework for developing economies utilizing macroeconomic indicators and XAI.
 
-**Anthony Jairam** · **Chidera Ezenwaka** · **Elizabeth Halls** · **La Toya Paul** · **Terry-Jo Dass**
+[**Anthony Jairam**](https://github.com/aaanthonyyy) · [**Chidera Ezenwaka**](https://github.com/chidera56) · [**Elizabeth Halls**](https://github.com/elizabethhalls) · [**La Toya Paul**](https://github.com/LaToyaPaul) · [**Terry-Jo Dass**](https://github.com/terryjodass)
 
 </div>
 
