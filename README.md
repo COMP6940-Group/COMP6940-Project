@@ -1,18 +1,16 @@
-# Global Salary Prediction & Wage Fairness Analysis
+<div align="center">
 
-> [!NOTE]
-> **COMP6940 – Big Data and Data Visualization**
-> The University of the West Indies · Jan 2026
+<img src="./artifacts/logo.png" alt="The Apex Predictors logo" width="240" />
 
+# THE APEX PREDICTORS
 
-**Group Alias:** 
+## Interpretable ML for Salary Benchmarking
 
----
+An anomaly detection and fair-market wage framework for developing economies utilizing macroeconomic indicators and XAI.
 
-<center>
-<h1>An Interpretable Machine Learning Framework for Salary Benchmarking and Wage Anomaly Detection in Developing Countries</h1>
-</center>
+**Anthony Jairam** · **Chidera Ezenwaka** · **Elizabeth Halls** · **La Toya Paul** · **Terry-Jo Dass**
 
+</div>
 
 ---
 
