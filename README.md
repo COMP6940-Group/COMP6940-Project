@@ -14,6 +14,29 @@ An anomaly detection and fair-market wage framework for developing economies uti
 
 ---
 
+## Introduction
+We present an interpretable machine learning
+framework for fair-market salary prediction and wage anomaly detection. We apply the framework to a benchmark dataset of 250,000 synthetic salary records enriched with real-world macroeconomic indicators from the Numbeo Cost of Living Index 2024, spanning nine countries and enabling cross-national purchasing power comparisons. Explainable AI (xAI) and counterfactual analysis are used to surface actionable career growth pathways.
+
+### Global Skill Benchmark (GSB)
+The GSB is a benchmark for fair-market salary prediction. It is a global average of the salary of a typical worker. It is calculated as the median salary of all workers in the dataset.
+
+$$\text{S}^{\text{GSB}}_k = \hat{y}_k^{\text{US}} = f_{\text{XGB}}(\mathbf{x}_k \,\oplus\, \mathbf{c}_{\text{US}})$$
+
+
+### Cobb-Douglas Parity Benchmark (CDPB)
+The CDPB is a benchmark for fair-market salary prediction. It is a global average of the salary of a typical worker. It is calculated as the median salary of all workers in the dataset.
+
+The CDPB is defined as:
+$$\text{CDPB}_k = \text{S}^{\text{GSB}}_k \cdot \left(\frac{\text{CoLRent}_k}{\text{CoLRent}_{\text{US}}}\right)^{\alpha} \cdot \left(\frac{\text{GDPpc}_k^{\text{PPP}}}{\text{GDPpc}_{\text{US}}^{\text{PPP}}}\right)^{1-\alpha}$$
+
+where $\alpha$ is the elasticity of substitution between the cost of living and the productivity of the worker.
+
+
+### Fair Wage Index (FWI)
+Each benchmark yields a Fair Wage Index $\text{FWI}_k$, defined as:
+$$\text{FWI}_k = \frac{S_k^{\text{actual}}}{\text{S}_k^{\text{benchmark}}}.$$
+
 ## Repository Layout
 
 ```
@@ -53,8 +76,8 @@ COMP6940-Project/
 
 | Dataset                              | Source                                     | Records (approx.) |
 | ------------------------------------ | ------------------------------------------ | ----------------- |
-| Job Salary Prediction                |                                            |                   |
-| Cost of Living Index by Country 2024 | [Numbeo / Kaggle](https://www.kaggle.com/) | 197 countries     |
+| Job Salary Prediction                | [Kaggle](https://www.kaggle.com/datasets/rhythmghai/250k-job-salary-prediction-dataset) | 250,000 records     |
+| Cost of Living Index by Country 2024 | [Numbeo / Kaggle](https://www.kaggle.com/datasets/myrios/cost-of-living-index-by-country-by-number-2024) | 121 countries     |
 
 
 After merging and cleaning, **25,065 rows** were dropped, leaving the final modelling dataset split 70 / 15 / 15 across train, validation, and test.
@@ -119,6 +142,7 @@ Open each notebook in the `notebooks/part1/` directory and run cells top-to-bott
 Model training in Notebook 3 logs runs to a local MLflow tracking server. To inspect experiments:
 
 ```bash
+cd notebooks/part1/
 uv run mlflow ui          # then open http://127.0.0.1:5000
 ```
 
