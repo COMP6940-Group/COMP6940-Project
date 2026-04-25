@@ -28,7 +28,10 @@ $$\text{S}^{\text{GSB}}_k = \hat{y}_k^{\text{US}} = f_{\text{XGB}}(\mathbf{x}_k 
 The CDPB is a benchmark for fair-market salary prediction. It is a global average of the salary of a typical worker. It is calculated as the median salary of all workers in the dataset.
 
 The CDPB is defined as:
-$$\text{CDPB}_k = \text{S}^{\text{GSB}}_k \cdot \left(\frac{\text{CoLRent}_k}{\text{CoLRent}_{\text{US}}}\right)^{\alpha} \cdot \left(\frac{\text{GDPpc}_k^{\text{PPP}}}{\text{GDPpc}_{\text{US}}^{\text{PPP}}}\right)^{1-\alpha}$$
+
+$$
+\text{CDPB}_k = \text{S}^{\text{GSB}}_k \cdot \left(\frac{\text{CoLRent}_k}{\text{CoLRent}_{\text{US}}}\right)^{\alpha} \cdot \left(\frac{\text{GDPpc}_k^{\text{PPP}}}{\text{GDPpc}_{\text{US}}^{\text{PPP}}}\right)^{1-\alpha}
+$$
 
 where $\alpha$ is the elasticity of substitution between the cost of living and the productivity of the worker.
 
